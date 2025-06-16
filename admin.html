@@ -1,0 +1,8 @@
+<h2>Admin Panel</h2>
+<button onclick="deleteMessage()">Delete Message</button>
+<button onclick="banUser()">Ban User</button>
+
+<script>
+function deleteMessage() { fetch("admin.php", { method: "POST", body: JSON.stringify({ action: "delete", message_id: 1 }) }); }
+function banUser() { fetch("admin.php", { method: "POST", body: JSON.stringify({ action: "ban", user_id: 2 }) }); }
+</script>
